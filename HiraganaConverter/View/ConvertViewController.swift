@@ -7,6 +7,7 @@ class ConvertViewController: UIViewController {
     @IBOutlet weak var hiraganaLabel: UILabel!
     @IBOutlet weak var kanjiTextField: UITextField!
     @IBOutlet weak var convertButton: UIButton!
+    @IBOutlet weak var gooImageView: UIImageView!
 
     private let convertViewModel = ConvertViewModel()
     private let disposeBag = DisposeBag()
@@ -15,6 +16,7 @@ class ConvertViewController: UIViewController {
         super.viewDidLoad()
         setupButton()
         bind()
+        setImage()
     }
 
     private func setupButton() {
@@ -33,6 +35,10 @@ class ConvertViewController: UIViewController {
         convertViewModel.hiragana
             .bind(to: hiraganaLabel.rx.text)
             .disposed(by: disposeBag)
+    }
+
+    private func setImage() {
+        gooImageView.image = UIImage(url: "http://u.xgoo.jp/img/sgoo.png")
     }
 
 }
