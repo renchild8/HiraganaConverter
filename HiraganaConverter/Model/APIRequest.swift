@@ -10,7 +10,7 @@ enum Result<ResponseModel: Codable, ErrorResponseModel: Codable> {
 
 public final class APIRequest {
 
-    let provider = MoyaProvider<Target>()
+    private let provider = MoyaProvider<Target>()
 
     func request<ResponseModel: Codable, ErrorResponseModel: Codable>(target: Target, response: ResponseModel.Type, errorResponse: ErrorResponseModel.Type,
                                                                       completion: @escaping ((Result<ResponseModel, ErrorResponseModel>) -> Void )) {
@@ -37,7 +37,7 @@ public final class APIRequest {
         }
     }
 
-    func serializeError<ErrorResponseModel: Codable>(response: Moya.Response, errorResponse: ErrorResponseModel.Type) -> ErrorResponseModel? {
+    private func serializeError<ErrorResponseModel: Codable>(response: Moya.Response, errorResponse: ErrorResponseModel.Type) -> ErrorResponseModel? {
         do {
             let errorResponse = try response.map(ErrorResponseModel.self)
             dump(errorResponse)
