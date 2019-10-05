@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Convert View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ConvertViewController" customModule="HiraganaConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ここにひらがなが表示されます" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDM-4e-uEH">
+                                <rect key="frame" x="100" y="370" width="214.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="漢字を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ho-jT-n8q">
+                                <rect key="frame" x="107" y="438" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="lI9-zg-kd0"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLB-wl-Tcv">
+                                <rect key="frame" x="191.5" y="518" width="31" height="30"/>
+                                <state key="normal" title="変換"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7ho-jT-n8q" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Gz2-XY-MtK"/>
+                            <constraint firstItem="FLB-wl-Tcv" firstAttribute="top" secondItem="7ho-jT-n8q" secondAttribute="bottom" constant="50" id="LRD-p6-0Ug"/>
+                            <constraint firstItem="FLB-wl-Tcv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="R6W-uI-Yln"/>
+                            <constraint firstItem="7ho-jT-n8q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SMY-it-14O"/>
+                            <constraint firstItem="ZDM-4e-uEH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kFz-ic-9oM"/>
+                            <constraint firstItem="7ho-jT-n8q" firstAttribute="top" secondItem="ZDM-4e-uEH" secondAttribute="bottom" constant="50" id="ttg-9k-aNb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="convertButton" destination="FLB-wl-Tcv" id="W8K-1V-ZaU"/>
+                        <outlet property="hiraganaLabel" destination="ZDM-4e-uEH" id="JLj-Fg-acU"/>
+                        <outlet property="kanjiTextField" destination="7ho-jT-n8q" id="dVc-LR-PyX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
