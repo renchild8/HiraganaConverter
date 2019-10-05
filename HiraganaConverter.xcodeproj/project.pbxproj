@@ -10,13 +10,21 @@
 		2D4996989060A510FAF15972 /* Pods_HiraganaConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4670150F3F948381899CCA /* Pods_HiraganaConverter.framework */; };
 		4BC225058B18E99D0016610F /* Pods_HiraganaConverterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB537510877FB6CB3BFF52DC /* Pods_HiraganaConverterUITests.framework */; };
 		B10ABFA74775619210DA5C63 /* Pods_HiraganaConverterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CB0BDAC94A792F4B0EC1DC /* Pods_HiraganaConverterTests.framework */; };
+		F035B8DE2348AFF300CC9007 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035B8DD2348AFF300CC9007 /* APIRequest.swift */; };
+		F035B8E02348B07000CC9007 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035B8DF2348B07000CC9007 /* Target.swift */; };
 		F04ECBB5234388C80054D1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04ECBB4234388C80054D1D1 /* AppDelegate.swift */; };
-		F04ECBB7234388C80054D1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04ECBB6234388C80054D1D1 /* ViewController.swift */; };
-		F04ECBBA234388C80054D1D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F04ECBB8234388C80054D1D1 /* Main.storyboard */; };
+		F04ECBB7234388C80054D1D1 /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04ECBB6234388C80054D1D1 /* ConvertViewController.swift */; };
+		F04ECBBA234388C80054D1D1 /* Convert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F04ECBB8234388C80054D1D1 /* Convert.storyboard */; };
 		F04ECBBC234388C90054D1D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F04ECBBB234388C90054D1D1 /* Assets.xcassets */; };
 		F04ECBBF234388C90054D1D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F04ECBBD234388C90054D1D1 /* LaunchScreen.storyboard */; };
 		F04ECBCA234388C90054D1D1 /* HiraganaConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04ECBC9234388C90054D1D1 /* HiraganaConverterTests.swift */; };
 		F04ECBD5234388C90054D1D1 /* HiraganaConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04ECBD4234388C90054D1D1 /* HiraganaConverterUITests.swift */; };
+		F06C15E92348BC610012C990 /* HiraganaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15E82348BC610012C990 /* HiraganaResponse.swift */; };
+		F06C15EB2348BF250012C990 /* HiraganaErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15EA2348BF250012C990 /* HiraganaErrorResponse.swift */; };
+		F06C15F12348D2990012C990 /* ConvertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15F02348D2990012C990 /* ConvertViewModel.swift */; };
+		F06C15F3234913B60012C990 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15F2234913B60012C990 /* UIApplication.swift */; };
+		F06C15F6234914180012C990 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15F5234914180012C990 /* AlertManager.swift */; };
+		F06C15F823491F2D0012C990 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15F723491F2D0012C990 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +53,12 @@
 		DBED9C8B69C7DF8E978A595B /* Pods-HiraganaConverterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaConverterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HiraganaConverterUITests/Pods-HiraganaConverterUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DD4670150F3F948381899CCA /* Pods_HiraganaConverter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaConverter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6FD88DED3CF04EE62BA95EB /* Pods-HiraganaConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaConverter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HiraganaConverter/Pods-HiraganaConverter.debug.xcconfig"; sourceTree = "<group>"; };
+		F035B8DD2348AFF300CC9007 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		F035B8DF2348B07000CC9007 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		F04ECBB1234388C80054D1D1 /* HiraganaConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04ECBB4234388C80054D1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F04ECBB6234388C80054D1D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F04ECBB9234388C80054D1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F04ECBB6234388C80054D1D1 /* ConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
+		F04ECBB9234388C80054D1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Convert.storyboard; sourceTree = "<group>"; };
 		F04ECBBB234388C90054D1D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F04ECBBE234388C90054D1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F04ECBC0234388C90054D1D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +68,12 @@
 		F04ECBD0234388C90054D1D1 /* HiraganaConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiraganaConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04ECBD4234388C90054D1D1 /* HiraganaConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaConverterUITests.swift; sourceTree = "<group>"; };
 		F04ECBD6234388C90054D1D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F06C15E82348BC610012C990 /* HiraganaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaResponse.swift; sourceTree = "<group>"; };
+		F06C15EA2348BF250012C990 /* HiraganaErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaErrorResponse.swift; sourceTree = "<group>"; };
+		F06C15F02348D2990012C990 /* ConvertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewModel.swift; sourceTree = "<group>"; };
+		F06C15F2234913B60012C990 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		F06C15F5234914180012C990 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		F06C15F723491F2D0012C990 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		FB537510877FB6CB3BFF52DC /* Pods_HiraganaConverterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaConverterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +128,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F035B8DC2348AFD200CC9007 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F035B8DD2348AFF300CC9007 /* APIRequest.swift */,
+				F035B8DF2348B07000CC9007 /* Target.swift */,
+				F06C15E72348BC440012C990 /* Responses */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F04ECBA8234388C80054D1D1 = {
 			isa = PBXGroup;
 			children = (
@@ -138,8 +164,10 @@
 			isa = PBXGroup;
 			children = (
 				F04ECBB4234388C80054D1D1 /* AppDelegate.swift */,
-				F04ECBB6234388C80054D1D1 /* ViewController.swift */,
-				F04ECBB8234388C80054D1D1 /* Main.storyboard */,
+				F035B8DC2348AFD200CC9007 /* Model */,
+				F0643AA0234793F00074BEBC /* View */,
+				F06C15EF2348D2770012C990 /* ViewModel */,
+				F06C15F4234913E30012C990 /* Extension */,
 				F04ECBBB234388C90054D1D1 /* Assets.xcassets */,
 				F04ECBBD234388C90054D1D1 /* LaunchScreen.storyboard */,
 				F04ECBC0234388C90054D1D1 /* Info.plist */,
@@ -163,6 +191,42 @@
 				F04ECBD6234388C90054D1D1 /* Info.plist */,
 			);
 			path = HiraganaConverterUITests;
+			sourceTree = "<group>";
+		};
+		F0643AA0234793F00074BEBC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F04ECBB6234388C80054D1D1 /* ConvertViewController.swift */,
+				F06C15F5234914180012C990 /* AlertManager.swift */,
+				F04ECBB8234388C80054D1D1 /* Convert.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F06C15E72348BC440012C990 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				F06C15E82348BC610012C990 /* HiraganaResponse.swift */,
+				F06C15EA2348BF250012C990 /* HiraganaErrorResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		F06C15EF2348D2770012C990 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F06C15F02348D2990012C990 /* ConvertViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F06C15F4234913E30012C990 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F06C15F2234913B60012C990 /* UIApplication.swift */,
+				F06C15F723491F2D0012C990 /* UIImage.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +340,7 @@
 			files = (
 				F04ECBBF234388C90054D1D1 /* LaunchScreen.storyboard in Resources */,
 				F04ECBBC234388C90054D1D1 /* Assets.xcassets in Resources */,
-				F04ECBBA234388C80054D1D1 /* Main.storyboard in Resources */,
+				F04ECBBA234388C80054D1D1 /* Convert.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +465,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F04ECBB7234388C80054D1D1 /* ViewController.swift in Sources */,
+				F06C15F3234913B60012C990 /* UIApplication.swift in Sources */,
+				F06C15F823491F2D0012C990 /* UIImage.swift in Sources */,
+				F04ECBB7234388C80054D1D1 /* ConvertViewController.swift in Sources */,
+				F06C15F6234914180012C990 /* AlertManager.swift in Sources */,
+				F035B8DE2348AFF300CC9007 /* APIRequest.swift in Sources */,
+				F06C15E92348BC610012C990 /* HiraganaResponse.swift in Sources */,
+				F06C15EB2348BF250012C990 /* HiraganaErrorResponse.swift in Sources */,
+				F035B8E02348B07000CC9007 /* Target.swift in Sources */,
+				F06C15F12348D2990012C990 /* ConvertViewModel.swift in Sources */,
 				F04ECBB5234388C80054D1D1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,12 +510,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F04ECBB8234388C80054D1D1 /* Main.storyboard */ = {
+		F04ECBB8234388C80054D1D1 /* Convert.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F04ECBB9234388C80054D1D1 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Convert.storyboard;
 			sourceTree = "<group>";
 		};
 		F04ECBBD234388C90054D1D1 /* LaunchScreen.storyboard */ = {
@@ -578,17 +650,20 @@
 			baseConfigurationReference = E6FD88DED3CF04EE62BA95EB /* Pods-HiraganaConverter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXF79DK4SH;
 				INFOPLIST_FILE = HiraganaConverter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.renchild.HiraganaConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -597,17 +672,20 @@
 			baseConfigurationReference = 2DAC1BE0BC11353C0927BF6B /* Pods-HiraganaConverter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXF79DK4SH;
 				INFOPLIST_FILE = HiraganaConverter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.renchild.HiraganaConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
