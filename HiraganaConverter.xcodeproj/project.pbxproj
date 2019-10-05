@@ -10,6 +10,8 @@
 		2D4996989060A510FAF15972 /* Pods_HiraganaConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4670150F3F948381899CCA /* Pods_HiraganaConverter.framework */; };
 		4BC225058B18E99D0016610F /* Pods_HiraganaConverterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB537510877FB6CB3BFF52DC /* Pods_HiraganaConverterUITests.framework */; };
 		B10ABFA74775619210DA5C63 /* Pods_HiraganaConverterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CB0BDAC94A792F4B0EC1DC /* Pods_HiraganaConverterTests.framework */; };
+		F035B8DE2348AFF300CC9007 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035B8DD2348AFF300CC9007 /* APIRequest.swift */; };
+		F035B8E02348B07000CC9007 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035B8DF2348B07000CC9007 /* Target.swift */; };
 		F04ECBB5234388C80054D1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04ECBB4234388C80054D1D1 /* AppDelegate.swift */; };
 		F04ECBB7234388C80054D1D1 /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04ECBB6234388C80054D1D1 /* ConvertViewController.swift */; };
 		F04ECBBA234388C80054D1D1 /* Convert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F04ECBB8234388C80054D1D1 /* Convert.storyboard */; };
@@ -17,6 +19,8 @@
 		F04ECBBF234388C90054D1D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F04ECBBD234388C90054D1D1 /* LaunchScreen.storyboard */; };
 		F04ECBCA234388C90054D1D1 /* HiraganaConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04ECBC9234388C90054D1D1 /* HiraganaConverterTests.swift */; };
 		F04ECBD5234388C90054D1D1 /* HiraganaConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04ECBD4234388C90054D1D1 /* HiraganaConverterUITests.swift */; };
+		F06C15E92348BC610012C990 /* HiraganaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15E82348BC610012C990 /* HiraganaResponse.swift */; };
+		F06C15EB2348BF250012C990 /* HiraganaErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15EA2348BF250012C990 /* HiraganaErrorResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,8 @@
 		DBED9C8B69C7DF8E978A595B /* Pods-HiraganaConverterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaConverterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HiraganaConverterUITests/Pods-HiraganaConverterUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DD4670150F3F948381899CCA /* Pods_HiraganaConverter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaConverter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6FD88DED3CF04EE62BA95EB /* Pods-HiraganaConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaConverter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HiraganaConverter/Pods-HiraganaConverter.debug.xcconfig"; sourceTree = "<group>"; };
+		F035B8DD2348AFF300CC9007 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		F035B8DF2348B07000CC9007 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		F04ECBB1234388C80054D1D1 /* HiraganaConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04ECBB4234388C80054D1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F04ECBB6234388C80054D1D1 /* ConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,8 @@
 		F04ECBD0234388C90054D1D1 /* HiraganaConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiraganaConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04ECBD4234388C90054D1D1 /* HiraganaConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaConverterUITests.swift; sourceTree = "<group>"; };
 		F04ECBD6234388C90054D1D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F06C15E82348BC610012C990 /* HiraganaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaResponse.swift; sourceTree = "<group>"; };
+		F06C15EA2348BF250012C990 /* HiraganaErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaErrorResponse.swift; sourceTree = "<group>"; };
 		FB537510877FB6CB3BFF52DC /* Pods_HiraganaConverterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaConverterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +120,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F035B8DC2348AFD200CC9007 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F035B8DD2348AFF300CC9007 /* APIRequest.swift */,
+				F035B8DF2348B07000CC9007 /* Target.swift */,
+				F06C15E72348BC440012C990 /* Responses */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F04ECBA8234388C80054D1D1 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				F04ECBB4234388C80054D1D1 /* AppDelegate.swift */,
+				F035B8DC2348AFD200CC9007 /* Model */,
 				F0643AA0234793F00074BEBC /* View */,
 				F04ECBBB234388C90054D1D1 /* Assets.xcassets */,
 				F04ECBBD234388C90054D1D1 /* LaunchScreen.storyboard */,
@@ -171,6 +190,15 @@
 				F04ECBB8234388C80054D1D1 /* Convert.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F06C15E72348BC440012C990 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				F06C15E82348BC610012C990 /* HiraganaResponse.swift */,
+				F06C15EA2348BF250012C990 /* HiraganaErrorResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +438,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F04ECBB7234388C80054D1D1 /* ConvertViewController.swift in Sources */,
+				F035B8DE2348AFF300CC9007 /* APIRequest.swift in Sources */,
+				F06C15E92348BC610012C990 /* HiraganaResponse.swift in Sources */,
+				F06C15EB2348BF250012C990 /* HiraganaErrorResponse.swift in Sources */,
+				F035B8E02348B07000CC9007 /* Target.swift in Sources */,
 				F04ECBB5234388C80054D1D1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
