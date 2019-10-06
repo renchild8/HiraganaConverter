@@ -2,12 +2,26 @@ import RxSwift
 import RxCocoa
 
 class ConvertViewModel {
-    var kanji = BehaviorRelay<String>(value: "")
     var hiragana = BehaviorRelay<String>(value: "ここにひらがなが表示されます")
+    var kanji = BehaviorRelay<String>(value: "")
 
     private let apiRequest = APIRequest()
 
+    func clearOfHiragana() {
+        hiragana.accept("")
+    }
+
+    func clearOfKanji() {
+        kanji.accept("")
+    }
+
     func convert() {
+
+        guard  kanji.value != "" else {
+            AlertManager.dispAlert(title: "Error", message: "入力欄が空です")
+            return
+        }
+
         apiRequest.request(target: .hiragana(sentence: kanji.value ), response: HiraganaResponse.self, errorResponse: HiraganaErrorResponse.self) { respose in
             switch respose {
             case .success(let hiraganaResponse):
