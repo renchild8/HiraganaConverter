@@ -6,9 +6,8 @@ class ConvertViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var hiraganaTextView: UITextView!
-    @IBOutlet weak var hiraganaClearButton: UIButton!
     @IBOutlet weak var kanjiTextView: PlaceHolderedTextView!
-    @IBOutlet weak var kanjiClearButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var convertButton: UIButton!
     @IBOutlet weak var gooImageView: UIImageView!
 
@@ -32,17 +31,11 @@ class ConvertViewController: UIViewController {
     }
 
     private func setupButton() {
-        hiraganaClearButton.rx.tap
-            .subscribe {[weak self] _ in
-                guard let self = self else { return }
-                self.convertViewModel.clearOfHiragana()
-            }.disposed(by: disposeBag)
-
-        kanjiClearButton.rx.tap
+        clearButton.rx.tap
             .subscribe {[weak self] _ in
                 guard let self = self else { return }
                 self.kanjiTextView.endEditing(true)
-                self.convertViewModel.clearOfKanji()
+                self.convertViewModel.clearText()
             }.disposed(by: disposeBag)
 
         convertButton.rx.tap

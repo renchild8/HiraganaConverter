@@ -7,12 +7,9 @@ class ConvertViewModel {
 
     private let apiRequest = APIRequest()
 
-    func clearOfHiragana() {
-        hiragana.accept("")
-    }
-
-    func clearOfKanji() {
+    func clearText() {
         kanji.accept("")
+        hiragana.accept("")
     }
 
     func convert() {
