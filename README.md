@@ -2,7 +2,8 @@
 漢字をひらがなに変換するアプリです。  
 gooさんが公開しているひらがな化APIを利用しています。
 
-![HiraganaConverter](https://user-images.githubusercontent.com/39119676/66266720-bce45e00-e863-11e9-9706-3edfbe52d3a3.jpg)
+![HiraganaConverter](https://user-images.githubusercontent.com/39119676/66266767-64fa2700-e864-11e9-8f25-0f481991900b.jpg)
+
 
 
 # 環境
