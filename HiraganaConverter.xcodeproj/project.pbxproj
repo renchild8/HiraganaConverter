@@ -25,6 +25,8 @@
 		F06C15F3234913B60012C990 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15F2234913B60012C990 /* UIApplication.swift */; };
 		F06C15F6234914180012C990 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15F5234914180012C990 /* AlertManager.swift */; };
 		F06C15F823491F2D0012C990 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15F723491F2D0012C990 /* UIImage.swift */; };
+		F06C15FB23498F750012C990 /* PlaceHolderedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15FA23498F750012C990 /* PlaceHolderedTextView.swift */; };
+		F06C15FD2349C38B0012C990 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15FC2349C38B0012C990 /* CALayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		F06C15F2234913B60012C990 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		F06C15F5234914180012C990 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		F06C15F723491F2D0012C990 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		F06C15FA23498F750012C990 /* PlaceHolderedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderedTextView.swift; sourceTree = "<group>"; };
+		F06C15FC2349C38B0012C990 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		FB537510877FB6CB3BFF52DC /* Pods_HiraganaConverterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaConverterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -197,8 +201,9 @@
 			isa = PBXGroup;
 			children = (
 				F04ECBB6234388C80054D1D1 /* ConvertViewController.swift */,
-				F06C15F5234914180012C990 /* AlertManager.swift */,
 				F04ECBB8234388C80054D1D1 /* Convert.storyboard */,
+				F06C15F5234914180012C990 /* AlertManager.swift */,
+				F06C15F923498F5C0012C990 /* CustomUI */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,8 +230,17 @@
 			children = (
 				F06C15F2234913B60012C990 /* UIApplication.swift */,
 				F06C15F723491F2D0012C990 /* UIImage.swift */,
+				F06C15FC2349C38B0012C990 /* CALayer.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F06C15F923498F5C0012C990 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				F06C15FA23498F750012C990 /* PlaceHolderedTextView.swift */,
+			);
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F06C15F3234913B60012C990 /* UIApplication.swift in Sources */,
+				F06C15FB23498F750012C990 /* PlaceHolderedTextView.swift in Sources */,
 				F06C15F823491F2D0012C990 /* UIImage.swift in Sources */,
 				F04ECBB7234388C80054D1D1 /* ConvertViewController.swift in Sources */,
 				F06C15F6234914180012C990 /* AlertManager.swift in Sources */,
@@ -473,6 +488,7 @@
 				F06C15E92348BC610012C990 /* HiraganaResponse.swift in Sources */,
 				F06C15EB2348BF250012C990 /* HiraganaErrorResponse.swift in Sources */,
 				F035B8E02348B07000CC9007 /* Target.swift in Sources */,
+				F06C15FD2349C38B0012C990 /* CALayer.swift in Sources */,
 				F06C15F12348D2990012C990 /* ConvertViewModel.swift in Sources */,
 				F04ECBB5234388C80054D1D1 /* AppDelegate.swift in Sources */,
 			);
