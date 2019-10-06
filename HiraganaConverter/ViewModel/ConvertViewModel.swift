@@ -18,7 +18,7 @@ class ConvertViewModel {
     func convert() {
 
         guard  kanji.value != "" else {
-            AlertManager.dispAlert(title: "Error", message: "入力欄が空です")
+            AlertManager.dispAlert(title: ErrorMessage.error, message: ErrorMessage.kanjiEmpty)
             return
         }
 
@@ -31,9 +31,10 @@ class ConvertViewModel {
                 AlertManager.dispAlert(title: String(errorResponse.error.code), message: errorResponse.error.message)
             case .failure(let error):
                 print(error)
-                AlertManager.dispAlert(title: "Error", message: error.localizedDescription)
+                AlertManager.dispAlert(title: ErrorMessage.error, message: error.localizedDescription)
             }
         }
+
     }
 
 }

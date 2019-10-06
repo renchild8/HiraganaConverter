@@ -9,7 +9,7 @@ extension Target: TargetType {
 
     var baseURL: URL {
         // swiftlint:disable force_unwrapping
-        return URL(string: "https://labs.goo.ne.jp/api/")!
+        return URL(string: Const.baseURL)!
         // swiftlint:enable force_unwrapping
     }
 
@@ -33,7 +33,7 @@ extension Target: TargetType {
 
     var task: Task {
         var parameters = [
-            "app_id" : "Your app ID"
+            "app_id" : Const.appID
         ]
 
         switch self {

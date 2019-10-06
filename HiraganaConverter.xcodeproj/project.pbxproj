@@ -27,6 +27,8 @@
 		F06C15F823491F2D0012C990 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15F723491F2D0012C990 /* UIImage.swift */; };
 		F06C15FB23498F750012C990 /* PlaceHolderedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15FA23498F750012C990 /* PlaceHolderedTextView.swift */; };
 		F06C15FD2349C38B0012C990 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15FC2349C38B0012C990 /* CALayer.swift */; };
+		F06C15FF2349F9670012C990 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C15FE2349F9670012C990 /* Const.swift */; };
+		F06C16012349FC900012C990 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C16002349FC900012C990 /* ErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		F06C15F723491F2D0012C990 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		F06C15FA23498F750012C990 /* PlaceHolderedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderedTextView.swift; sourceTree = "<group>"; };
 		F06C15FC2349C38B0012C990 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		F06C15FE2349F9670012C990 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		F06C16002349FC900012C990 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		FB537510877FB6CB3BFF52DC /* Pods_HiraganaConverterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaConverterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,6 +141,8 @@
 			children = (
 				F035B8DD2348AFF300CC9007 /* APIRequest.swift */,
 				F035B8DF2348B07000CC9007 /* Target.swift */,
+				F06C15FE2349F9670012C990 /* Const.swift */,
+				F06C16002349FC900012C990 /* ErrorMessage.swift */,
 				F06C15E72348BC440012C990 /* Responses */,
 			);
 			path = Model;
@@ -485,10 +491,12 @@
 				F035B8DE2348AFF300CC9007 /* APIRequest.swift in Sources */,
 				F06C15E92348BC610012C990 /* HiraganaResponse.swift in Sources */,
 				F06C15EB2348BF250012C990 /* HiraganaErrorResponse.swift in Sources */,
+				F06C16012349FC900012C990 /* ErrorMessage.swift in Sources */,
 				F035B8E02348B07000CC9007 /* Target.swift in Sources */,
 				F06C15FD2349C38B0012C990 /* CALayer.swift in Sources */,
 				F06C15F12348D2990012C990 /* ConvertViewModel.swift in Sources */,
 				F04ECBB5234388C80054D1D1 /* AppDelegate.swift in Sources */,
+				F06C15FF2349F9670012C990 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
