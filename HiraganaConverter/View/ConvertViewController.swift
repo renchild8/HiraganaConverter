@@ -68,24 +68,25 @@ class ConvertViewController: UIViewController {
     }
 
     private func setImage() {
-        gooImageView.image = UIImage(url: "http://u.xgoo.jp/img/sgoo.png")
+        gooImageView.image = UIImage(url: Const.gooImageURL)
     }
+
     private func setDelegate() {
         kanjiTextView.delegate = self
     }
 
-    func setupObserver() {
+    private func setupObserver() {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(ConvertViewController.keyboardWillShowNotification(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(ConvertViewController.keyboardWillHideNotification(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    func removeObserver() {
+    private func removeObserver() {
         let notification = NotificationCenter.default
         notification.removeObserver(self)
     }
 
-    @objc func keyboardWillShowNotification(_ notification: Notification) {
+    @objc private func keyboardWillShowNotification(_ notification: Notification) {
 
         guard let keyboardScreenEndFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
 
@@ -98,7 +99,7 @@ class ConvertViewController: UIViewController {
         }
     }
 
-    @objc func keyboardWillHideNotification(_ notification: Notification) {
+    @objc private func keyboardWillHideNotification(_ notification: Notification) {
         scrollView.contentOffset.y = 0
     }
 }
