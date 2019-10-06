@@ -84,13 +84,13 @@
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="漢字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0j5-9L-fq4">
-                                                <rect key="frame" x="20" y="271" width="35" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="20" y="271" width="41" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d2N-Sw-tNk" customClass="PlaceHolderedTextView" customModule="HiraganaConverter" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="312" width="374" height="125"/>
+                                                <rect key="frame" x="20" y="315" width="374" height="125"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="125" id="ptR-5f-soe"/>
@@ -110,13 +110,26 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vf-GB-17R">
+                                                <rect key="frame" x="351" y="281" width="43" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Clear"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbf-G4-Kkp">
+                                                <rect key="frame" x="351" y="30" width="43" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Clear"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="50j-H9-6PC" firstAttribute="top" secondItem="TSd-dr-fL3" secondAttribute="bottom" constant="20" id="677-8x-sMQ"/>
                                             <constraint firstItem="d2N-Sw-tNk" firstAttribute="leading" secondItem="eG2-e7-NsO" secondAttribute="leading" constant="20" id="BfU-hw-kWF"/>
                                             <constraint firstItem="FLB-wl-Tcv" firstAttribute="centerX" secondItem="eG2-e7-NsO" secondAttribute="centerX" id="C3O-cW-oHy"/>
+                                            <constraint firstItem="9vf-GB-17R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0j5-9L-fq4" secondAttribute="trailing" constant="8" symbolic="YES" id="IWh-2V-2vl"/>
+                                            <constraint firstItem="d2N-Sw-tNk" firstAttribute="top" secondItem="9vf-GB-17R" secondAttribute="bottom" id="LYL-Xk-cLO"/>
                                             <constraint firstItem="TSd-dr-fL3" firstAttribute="leading" secondItem="eG2-e7-NsO" secondAttribute="leading" constant="20" id="LzM-Em-0aJ"/>
+                                            <constraint firstItem="Xbf-G4-Kkp" firstAttribute="trailing" secondItem="50j-H9-6PC" secondAttribute="trailing" id="Qzg-rw-d9c"/>
                                             <constraint firstItem="d2N-Sw-tNk" firstAttribute="top" secondItem="0j5-9L-fq4" secondAttribute="bottom" constant="20" id="RAS-Iv-vbz"/>
                                             <constraint firstItem="FLB-wl-Tcv" firstAttribute="leading" secondItem="eG2-e7-NsO" secondAttribute="leading" constant="75" id="SZg-Ve-SRs"/>
                                             <constraint firstItem="0j5-9L-fq4" firstAttribute="leading" secondItem="eG2-e7-NsO" secondAttribute="leading" constant="20" id="Vwn-oZ-cCq"/>
@@ -124,6 +137,10 @@
                                             <constraint firstItem="TSd-dr-fL3" firstAttribute="top" secondItem="eG2-e7-NsO" secondAttribute="top" constant="20" id="ZR7-1M-DoA"/>
                                             <constraint firstItem="50j-H9-6PC" firstAttribute="leading" secondItem="eG2-e7-NsO" secondAttribute="leading" constant="20" id="bgu-MD-mzL"/>
                                             <constraint firstItem="50j-H9-6PC" firstAttribute="centerX" secondItem="eG2-e7-NsO" secondAttribute="centerX" id="dlk-Kw-aTP"/>
+                                            <constraint firstItem="9vf-GB-17R" firstAttribute="trailing" secondItem="d2N-Sw-tNk" secondAttribute="trailing" id="eb4-UU-cwp"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0j5-9L-fq4" secondAttribute="trailing" constant="20" symbolic="YES" id="g8o-XO-dEA"/>
+                                            <constraint firstItem="50j-H9-6PC" firstAttribute="top" secondItem="Xbf-G4-Kkp" secondAttribute="bottom" id="g9l-Wv-Q62"/>
+                                            <constraint firstItem="Xbf-G4-Kkp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TSd-dr-fL3" secondAttribute="trailing" constant="8" symbolic="YES" id="lgs-ZX-pNR"/>
                                             <constraint firstItem="FLB-wl-Tcv" firstAttribute="top" secondItem="50j-H9-6PC" secondAttribute="bottom" constant="20" id="pi1-HO-Y0i"/>
                                             <constraint firstItem="0j5-9L-fq4" firstAttribute="top" secondItem="FLB-wl-Tcv" secondAttribute="bottom" constant="20" id="xCz-gw-ASy"/>
                                         </constraints>
@@ -159,7 +176,9 @@
                     <connections>
                         <outlet property="convertButton" destination="FLB-wl-Tcv" id="W8K-1V-ZaU"/>
                         <outlet property="gooImageView" destination="wms-N9-iYc" id="Ka1-KW-duv"/>
+                        <outlet property="hiraganaClearButton" destination="Xbf-G4-Kkp" id="IX3-LS-fpH"/>
                         <outlet property="hiraganaTextView" destination="50j-H9-6PC" id="n8C-3c-6bN"/>
+                        <outlet property="kanjiClearButton" destination="9vf-GB-17R" id="8mm-bb-Gvw"/>
                         <outlet property="kanjiTextView" destination="d2N-Sw-tNk" id="p5n-aW-rRr"/>
                         <outlet property="scrollView" destination="BRt-L2-lVM" id="7nU-1U-Bm4"/>
                     </connections>
