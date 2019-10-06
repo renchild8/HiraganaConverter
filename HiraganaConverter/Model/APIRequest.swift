@@ -1,6 +1,7 @@
 import Foundation
 import RxSwift
 import Moya
+import SVProgressHUD
 
 enum Result<ResponseModel: Codable, ErrorResponseModel: Codable> {
     case success(ResponseModel)
@@ -14,7 +15,11 @@ public final class APIRequest {
 
     func request<ResponseModel: Codable, ErrorResponseModel: Codable>(target: Target, response: ResponseModel.Type, errorResponse: ErrorResponseModel.Type,
                                                                       completion: @escaping ((Result<ResponseModel, ErrorResponseModel>) -> Void )) {
+
+        SVProgressHUD.setDefaultMaskType(.black)
+        SVProgressHUD.show()
         provider.request(target) { result in
+            SVProgressHUD.dismiss()
             switch result {
             case let .success(response):
                 do {
