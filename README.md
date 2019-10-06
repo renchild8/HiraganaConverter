@@ -2,9 +2,7 @@
 漢字をひらがなに変換するアプリです。  
 gooさんが公開しているひらがな化APIを利用しています。
 
-![HiraganaConverter](https://user-images.githubusercontent.com/39119676/66266767-64fa2700-e864-11e9-8f25-0f481991900b.jpg)
-
-
+![HiraganaConverter](https://user-images.githubusercontent.com/39119676/66268488-c88e4f80-e878-11e9-956a-66e7d1a230b7.jpeg)
 
 # 環境
  - macOS Mojave 10.14.5
@@ -20,9 +18,7 @@ gooさんが公開しているひらがな化APIを利用しています。
  - [Moya/RxSwift](https://github.com/Moya/Moya)
  - [SwiftLint](https://github.com/realm/SwiftLint)
  
-
- 
 # API
  - [goo ひらがな化API](https://labs.goo.ne.jp/api/jp/hiragana-translation/)  
-[app_id](https://github.com/renchild8/HiraganaConverter/blob/bde38d36636fe441b040b9857a451a7c1ed354a6/HiraganaConverter/Model/Target.swift#L36)
+[app_id](https://github.com/renchild8/HiraganaConverter/blob/f3558d2898cb3066529b78538b83b289048537bb/HiraganaConverter/Model/Const.swift#L4)
 は適宜取得し、変更してください。取得方法は[こちら](https://labs.goo.ne.jp/apiusage/)
