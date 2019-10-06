@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,22 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDM-4e-uEH">
-                                <rect key="frame" x="207" y="288" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="漢字を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ho-jT-n8q">
-                                <rect key="frame" x="118" y="338" width="178.5" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLB-wl-Tcv">
-                                <rect key="frame" x="191.5" y="418" width="31" height="30"/>
-                                <state key="normal" title="変換"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQU-U6-MKW" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="-6" width="414" height="134"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iM4-db-vsJ">
+                                        <rect key="frame" x="10" y="50" width="204" height="84"/>
+                                        <string key="text">ひらがな
+変換</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="HeaderColor"/>
+                                <constraints>
+                                    <constraint firstItem="iM4-db-vsJ" firstAttribute="leading" secondItem="YQU-U6-MKW" secondAttribute="leading" constant="10" id="Pnb-Hc-n1y"/>
+                                    <constraint firstAttribute="bottom" secondItem="iM4-db-vsJ" secondAttribute="bottom" id="R32-1Z-3xv"/>
+                                </constraints>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wms-N9-iYc">
                                 <rect key="frame" x="214" y="44" width="200" height="84"/>
                                 <constraints>
@@ -40,29 +43,108 @@
                                     <constraint firstAttribute="width" constant="200" id="t4l-nC-nPc"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ひらがな" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSd-dr-fL3">
+                                <rect key="frame" x="20" y="144" width="82" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="50j-H9-6PC">
+                                <rect key="frame" x="20" y="188" width="374" height="125"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="bA9-9r-iF5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                        <color key="value" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="漢字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0j5-9L-fq4">
+                                <rect key="frame" x="20" y="395" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d2N-Sw-tNk" customClass="PlaceHolderedTextView" customModule="HiraganaConverter" customModuleProvider="target">
+                                <rect key="frame" x="20" y="436" width="374" height="125"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="ptR-5f-soe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="漢字を入力してください"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                        <color key="value" red="0.1137254902" green="0.15686274510000001" blue="0.78443353900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLB-wl-Tcv">
+                                <rect key="frame" x="75" y="333" width="264" height="42"/>
+                                <color key="backgroundColor" name="HeaderColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="↑">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wms-N9-iYc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0Bh-GL-VRp"/>
-                            <constraint firstItem="7ho-jT-n8q" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="Gz2-XY-MtK"/>
-                            <constraint firstItem="FLB-wl-Tcv" firstAttribute="top" secondItem="7ho-jT-n8q" secondAttribute="bottom" constant="50" id="LRD-p6-0Ug"/>
+                            <constraint firstItem="TSd-dr-fL3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0Tb-Pg-G7t"/>
+                            <constraint firstItem="d2N-Sw-tNk" firstAttribute="top" secondItem="0j5-9L-fq4" secondAttribute="bottom" constant="20" id="3BL-4n-i5t"/>
+                            <constraint firstItem="50j-H9-6PC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4vd-Se-c3C"/>
+                            <constraint firstItem="d2N-Sw-tNk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="88B-zN-jad"/>
+                            <constraint firstItem="YQU-U6-MKW" firstAttribute="height" secondItem="wms-N9-iYc" secondAttribute="height" constant="50" id="8E9-rO-lTj"/>
+                            <constraint firstItem="d2N-Sw-tNk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DYX-dZ-Q7R"/>
+                            <constraint firstItem="wms-N9-iYc" firstAttribute="leading" secondItem="iM4-db-vsJ" secondAttribute="trailing" id="ETN-5q-am5"/>
+                            <constraint firstItem="50j-H9-6PC" firstAttribute="top" secondItem="TSd-dr-fL3" secondAttribute="bottom" constant="20" id="Jdu-pb-1TU"/>
+                            <constraint firstItem="TSd-dr-fL3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="P2R-8G-6Lz"/>
+                            <constraint firstItem="0j5-9L-fq4" firstAttribute="top" secondItem="FLB-wl-Tcv" secondAttribute="bottom" constant="20" id="Ql2-dC-70x"/>
                             <constraint firstItem="FLB-wl-Tcv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="R6W-uI-Yln"/>
-                            <constraint firstItem="7ho-jT-n8q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SMY-it-14O"/>
-                            <constraint firstItem="ZDM-4e-uEH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kFz-ic-9oM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YQU-U6-MKW" secondAttribute="trailing" id="RZ8-2H-C8B"/>
+                            <constraint firstItem="YQU-U6-MKW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-50" id="YRU-Vj-g7u"/>
+                            <constraint firstItem="50j-H9-6PC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="b4D-qq-CdR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wms-N9-iYc" secondAttribute="trailing" id="kXH-wy-CsU"/>
-                            <constraint firstItem="7ho-jT-n8q" firstAttribute="top" secondItem="ZDM-4e-uEH" secondAttribute="bottom" constant="50" id="ttg-9k-aNb"/>
+                            <constraint firstItem="0j5-9L-fq4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="le1-bs-mfr"/>
+                            <constraint firstItem="FLB-wl-Tcv" firstAttribute="top" secondItem="50j-H9-6PC" secondAttribute="bottom" constant="20" id="lkU-TP-Mfx"/>
+                            <constraint firstItem="YQU-U6-MKW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lqw-Iv-oet"/>
+                            <constraint firstItem="FLB-wl-Tcv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="nDI-Dk-Avj"/>
+                            <constraint firstItem="iM4-db-vsJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qQa-cX-db5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="convertButton" destination="FLB-wl-Tcv" id="W8K-1V-ZaU"/>
                         <outlet property="gooImageView" destination="wms-N9-iYc" id="Ka1-KW-duv"/>
-                        <outlet property="hiraganaLabel" destination="ZDM-4e-uEH" id="JLj-Fg-acU"/>
-                        <outlet property="kanjiTextField" destination="7ho-jT-n8q" id="dVc-LR-PyX"/>
+                        <outlet property="hiraganaTextView" destination="50j-H9-6PC" id="n8C-3c-6bN"/>
+                        <outlet property="kanjiTextView" destination="d2N-Sw-tNk" id="p5n-aW-rRr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="HeaderColor">
+            <color red="0.12200000137090683" green="0.29100000858306885" blue="0.83899998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

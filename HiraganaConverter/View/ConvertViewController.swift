@@ -4,8 +4,8 @@ import RxCocoa
 
 class ConvertViewController: UIViewController {
 
-    @IBOutlet weak var hiraganaLabel: UILabel!
-    @IBOutlet weak var kanjiTextField: UITextField!
+    @IBOutlet weak var hiraganaTextView: UITextView!
+    @IBOutlet weak var kanjiTextView: PlaceHolderedTextView!
     @IBOutlet weak var convertButton: UIButton!
     @IBOutlet weak var gooImageView: UIImageView!
 
@@ -28,12 +28,12 @@ class ConvertViewController: UIViewController {
     }
 
     private func bind() {
-        kanjiTextField.rx.text.orEmpty
+        kanjiTextView.rx.text.orEmpty
             .bind(to: convertViewModel.kanji)
             .disposed(by: disposeBag)
 
         convertViewModel.hiragana
-            .bind(to: hiraganaLabel.rx.text)
+            .bind(to: hiraganaTextView.rx.text)
             .disposed(by: disposeBag)
     }
 
