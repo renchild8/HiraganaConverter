@@ -4,6 +4,7 @@ import RxCocoa
 
 class ConvertViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var hiraganaTextView: UITextView!
     @IBOutlet weak var kanjiTextView: PlaceHolderedTextView!
     @IBOutlet weak var convertButton: UIButton!
@@ -17,6 +18,15 @@ class ConvertViewController: UIViewController {
         setupButton()
         bind()
         setImage()
+        setDelegate()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        setupObserver()
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        removeObserver()
     }
 
     private func setupButton() {
@@ -39,6 +49,49 @@ class ConvertViewController: UIViewController {
 
     private func setImage() {
         gooImageView.image = UIImage(url: "http://u.xgoo.jp/img/sgoo.png")
+    }
+    private func setDelegate() {
+        kanjiTextView.delegate = self
+    }
+
+    func setupObserver() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(ConvertViewController.keyboardWillShowNotification(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(ConvertViewController.keyboardWillHideNotification(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    func removeObserver() {
+        let notification = NotificationCenter.default
+        notification.removeObserver(self)
+    }
+
+    @objc func keyboardWillShowNotification(_ notification: Notification) {
+
+        guard let keyboardScreenEndFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+
+        let boundSize: CGSize = UIScreen.main.bounds.size
+        let textViewBottom = kanjiTextView.frame.origin.y + kanjiTextView.frame.height
+        let keyboardtop = boundSize.height - keyboardScreenEndFrame.size.height
+
+        if textViewBottom >= keyboardtop {
+            scrollView.contentOffset.y = textViewBottom / 2
+        }
+    }
+
+    @objc func keyboardWillHideNotification(_ notification: Notification) {
+        scrollView.contentOffset.y = 0
+    }
+}
+
+extension ConvertViewController: UITextViewDelegate {
+
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        scrollView.isScrollEnabled = true
+        return true
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        scrollView.isScrollEnabled = false
     }
 
 }
