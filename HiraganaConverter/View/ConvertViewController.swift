@@ -6,9 +6,8 @@ class ConvertViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var hiraganaTextView: UITextView!
-    @IBOutlet weak var hiraganaClearButton: UIButton!
     @IBOutlet weak var kanjiTextView: PlaceHolderedTextView!
-    @IBOutlet weak var kanjiClearButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var convertButton: UIButton!
     @IBOutlet weak var gooImageView: UIImageView!
 
@@ -32,17 +31,11 @@ class ConvertViewController: UIViewController {
     }
 
     private func setupButton() {
-        hiraganaClearButton.rx.tap
-            .subscribe {[weak self] _ in
-                guard let self = self else { return }
-                self.convertViewModel.clearOfHiragana()
-            }.disposed(by: disposeBag)
-
-        kanjiClearButton.rx.tap
+        clearButton.rx.tap
             .subscribe {[weak self] _ in
                 guard let self = self else { return }
                 self.kanjiTextView.endEditing(true)
-                self.convertViewModel.clearOfKanji()
+                self.convertViewModel.clearText()
             }.disposed(by: disposeBag)
 
         convertButton.rx.tap
@@ -77,26 +70,12 @@ class ConvertViewController: UIViewController {
 
     private func setupObserver() {
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(ConvertViewController.keyboardWillShowNotification(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(ConvertViewController.keyboardWillHideNotification(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     private func removeObserver() {
         let notification = NotificationCenter.default
         notification.removeObserver(self)
-    }
-
-    @objc private func keyboardWillShowNotification(_ notification: Notification) {
-
-        guard let keyboardScreenEndFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
-
-        let boundSize: CGSize = UIScreen.main.bounds.size
-        let textViewBottom = kanjiTextView.frame.origin.y + kanjiTextView.frame.height
-        let keyboardtop = boundSize.height - keyboardScreenEndFrame.size.height
-
-        if textViewBottom >= keyboardtop {
-            scrollView.contentOffset.y = textViewBottom / 2
-        }
     }
 
     @objc private func keyboardWillHideNotification(_ notification: Notification) {
