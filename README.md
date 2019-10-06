@@ -2,7 +2,7 @@
 漢字をひらがなに変換するアプリです。  
 gooさんが公開しているひらがな化APIを利用しています。
 
-![HiraganaConverter](https://user-images.githubusercontent.com/39119676/66268488-c88e4f80-e878-11e9-956a-66e7d1a230b7.jpeg)
+![HiraganaConverter](https://user-images.githubusercontent.com/39119676/66271718-60516500-e89c-11e9-92ee-cd04afb9bb8a.jpeg)
 
 # 環境
  - macOS Mojave 10.14.5
