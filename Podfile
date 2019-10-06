@@ -10,6 +10,7 @@ target 'HiraganaConverter' do
   pod 'Moya/RxSwift'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'SVProgressHUD'
 
   target 'HiraganaConverterTests' do
     inherit! :search_paths
