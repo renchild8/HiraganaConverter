@@ -10,7 +10,7 @@ gooさんが公開しているひらがな化APIを利用しています。
  - Swift 5
  - iOS 12.0
 
-# Liblary
+# Library
 バージョンに関しては [Podfile.lock](https://github.com/renchild8/HiraganaConverter/blob/master/Podfile.lock)をご確認ください。
 
  - [RxSwift](https://github.com/ReactiveX/RxSwift)
