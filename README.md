@@ -16,6 +16,7 @@ gooさんが公開しているひらがな化APIを利用しています。
  - [RxSwift](https://github.com/ReactiveX/RxSwift)
  - [RxCocoa](https://github.com/ReactiveX/RxSwift/tree/master/RxCocoa)
  - [Moya/RxSwift](https://github.com/Moya/Moya)
+ - [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD)
  - [SwiftLint](https://github.com/realm/SwiftLint)
  
 # API
