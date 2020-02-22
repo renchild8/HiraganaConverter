@@ -36,14 +36,14 @@ class ConvertViewController: UIViewController {
                 guard let self = self else { return }
                 self.kanjiTextView.endEditing(true)
                 self.convertViewModel.clearText()
-            }.disposed(by: disposeBag)
+        }.disposed(by: disposeBag)
 
         convertButton.rx.tap
             .subscribe {[weak self] _ in
                 guard let self = self else { return }
                 self.kanjiTextView.endEditing(true)
                 self.convertViewModel.convert()
-            }.disposed(by: disposeBag)
+        }.disposed(by: disposeBag)
     }
 
     private func bind() {
